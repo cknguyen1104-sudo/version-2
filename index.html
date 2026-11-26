@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0e1b3d">
+<title>Cross Country Speed Stars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game"></canvas>
+
+  <!-- RACE HUD -->
+  <div id="hud" class="hidden">
+    <div id="hud-top-left">
+      <button id="h-menu" class="chip" title="Menu">&#9664; MENU</button>
+      <button id="h-restart" class="chip" title="Restart (R)">&#10227; RESTART</button>
+      <button id="h-pause" class="chip" title="Pause (Esc)">&#10074;&#10074;</button>
+    </div>
+    <div id="hud-top-right"><div id="h-pos">1<small>/1</small></div><div id="h-rem">0 m</div><div id="h-surf">GRASS</div></div>
+    <div id="hud-bottom">
+      <div id="panel-energy" class="panel">
+        <div class="row"><span class="lbl">ENERGY</span><div class="bar"><i id="b-energy"></i><u id="b-thr"></u><s id="b-regen"></s></div><span id="t-energy" class="num">100%</span></div>
+        <div class="row"><span class="lbl">FATIGUE</span><div class="bar small"><i id="b-fat"></i></div><span id="t-fat" class="num">0%</span></div>
+        <div class="row"><span class="lbl">EFFORT</span><div id="pips"><b></b><b></b><b></b><b></b></div><span id="t-effort" class="num">EASY</span></div>
+      </div>
+      <div id="panel-cad" class="panel">
+        <div id="lamps"><div id="lamp-L"><span>&#9995;</span>L</div><div id="lamp-R">R<span>&#9995;</span></div></div>
+        <div id="t-cad">CADENCE 0.0</div>
+        <div id="t-rhythm">&nbsp;</div>
+      </div>
+      <div id="panel-time" class="oval"><div id="t-time">0.00 s</div><div id="t-speed">0.0 mph</div></div>
+    </div>
+    <div id="kick-hint" class="hidden">HOLD <b>SPACE</b> TO KICK!</div>
+    <div id="countdown"></div>
+    <div id="banner"></div>
+  </div>
+
+  <!-- TOUCH CONTROLS -->
+  <div id="touch" class="hidden">
+    <button id="btn-left" class="tbtn"><span>&#9995;</span>LEFT</button>
+    <button id="btn-kick" class="tbtn kick">KICK</button>
+    <button id="btn-right" class="tbtn"><span>&#9995;</span>RIGHT</button>
+  </div>
+</div>
+
+<div id="screens">
+  <section id="s-menu" class="screen"></section>
+  <section id="s-setup" class="screen hidden"></section>
+  <section id="s-custom" class="screen hidden"></section>
+  <section id="s-settings" class="screen hidden"></section>
+  <section id="s-results" class="screen hidden"></section>
+  <section id="s-pause" class="screen hidden"></section>
+</div>
+<div id="rotate" class="hidden">&#8635; Rotate your phone to landscape for the best view</div>
+
+<script src="assets/manifest.js"></script>
+<script src="js/config.js"></script>
+<script src="js/course.js"></script>
+<script src="js/runner.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/input.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/render.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
